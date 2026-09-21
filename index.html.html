@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TiffinPoint — South Indian tiffin & catering in Eindhoven</title>
+<meta name="description" content="Home-style South Indian tiffin, cooked to order in Eindhoven. Idli, dosa, poori, biryani and more — order on WhatsApp for pickup or delivery, or book catering.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FBF6EC;
+    --panel: #EDEAD6;
+    --ink: #1F2A20;
+    --ink-soft: #3C4F41;
+    --ink-mute: #4B5E4F;
+    --rust: #1F4D3A;
+    --rust-dark: #163829;
+    --dark: #16261C;
+    --gold: #C99A2E;
+    --gold-dark: #A87F22;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--cream); font-family: 'Work Sans', sans-serif; color: var(--ink); }
+  .hero-wrap { position: relative; overflow: hidden; }
+  .hero-pattern {
+    position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background-image:
+      radial-gradient(circle at 8% 18%, rgba(31,77,58,0.16) 0 10px, transparent 11px),
+      radial-gradient(circle at 92% 12%, rgba(201,154,46,0.22) 0 14px, transparent 15px),
+      radial-gradient(circle at 85% 78%, rgba(31,77,58,0.14) 0 12px, transparent 13px),
+      radial-gradient(circle at 15% 82%, rgba(201,154,46,0.16) 0 8px, transparent 9px),
+      radial-gradient(circle at 45% 8%, rgba(31,77,58,0.10) 0 6px, transparent 7px),
+      radial-gradient(circle at 70% 40%, rgba(201,154,46,0.12) 0 7px, transparent 8px),
+      linear-gradient(180deg, #F3EED9 0%, var(--cream) 65%);
+  }
+  .hero-inner { position: relative; z-index: 1; }
+  .catalog-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--gold); color: var(--dark); padding: 10px 18px; border-radius: 3px; text-decoration: none; font-size: 14px; font-weight: 500; }
+  .catalog-btn:hover { background: var(--gold-dark); }
+  .serif { font-family: 'Fraunces', serif; }
+  a { color: inherit; }
+  a.link { color: var(--rust); text-decoration: none; border-bottom: 1px solid rgba(138,51,36,0.35); }
+  a.link:hover { border-bottom-color: var(--rust); }
+  a.navlink { color: var(--ink); text-decoration: none; font-size: 15px; }
+  a.navlink:hover { color: var(--rust); }
+  .btn-primary { display: inline-flex; align-items: center; gap: 10px; background: var(--rust); color: var(--cream); padding: 14px 26px; border-radius: 3px; text-decoration: none; font-size: 16px; font-weight: 500; border: none; cursor: pointer; }
+  .btn-primary:hover { background: var(--rust-dark); }
+  .btn-secondary { display: inline-flex; align-items: center; gap: 10px; background: transparent; color: var(--ink); padding: 13px 24px; border-radius: 3px; text-decoration: none; font-size: 16px; font-weight: 500; border: 1px solid var(--ink); }
+  .btn-secondary:hover { background: rgba(42,36,23,0.06); }
+  .row { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; padding: 15px 0; border-bottom: 1px solid rgba(42,36,23,0.12); }
+  .row:last-child { border-bottom: none; }
+  .item-name { font-size: 16px; }
+  .item-price { font-size: 16px; font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--ink-mute); }
+  .section { padding: 72px 8vw; max-width: 1040px; margin: 0 auto; }
+  .header { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; padding: 18px 8vw; background: rgba(251,246,236,0.94); border-bottom: 1px solid rgba(42,36,23,0.12); backdrop-filter: blur(6px); }
+  .facts { display: flex; align-items: center; gap: 28px; }
+  .fact-divider { width: 1px; height: 28px; background: rgba(42,36,23,0.2); }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .cat-title { font-size: 17px; font-weight: 600; margin-bottom: 14px; color: var(--rust); }
+  @media (max-width: 720px) {
+    .section { padding: 56px 6vw; }
+    .hero-head { font-size: 38px !important; }
+    .two-col { grid-template-columns: 1fr !important; }
+    .facts { flex-direction: column !important; align-items: flex-start !important; gap: 16px !important; }
+    .fact-divider { display: none !important; }
+    .header { flex-wrap: wrap; gap: 12px; }
+    .header .navlinks { gap: 18px !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="serif" style="font-size: 22px; font-weight: 600;">TiffinPoint</div>
+  <div class="navlinks" style="display: flex; align-items: center; gap: 28px;">
+    <a class="navlink" href="#menu">Menu</a>
+    <a class="navlink" href="#hours">Hours</a>
+    <a class="navlink" href="#catering">Catering</a>
+    <a class="btn-primary" style="padding: 10px 18px; font-size: 14px;" href="https://wa.me/31622364947?text=Hi%20TiffinPoint%2C%20I%27d%20like%20to%20place%20an%20order." target="_blank" rel="noopener">Order on WhatsApp</a>
+  </div>
+</div>
+
+<div class="hero-wrap">
+  <div class="hero-pattern"></div>
+  <div class="section hero-inner" style="padding-top: 88px; padding-bottom: 56px; max-width: 720px;">
+    <h1 class="serif hero-head" style="margin: 0 0 22px; font-size: 52px; line-height: 1.1; font-weight: 600;">Home-style South Indian food, cooked to order in Eindhoven.</h1>
+    <p style="margin: 0 0 34px; font-size: 18px; line-height: 1.6; color: var(--ink-soft); max-width: 540px;">Idli, dosa, poori, uttappam, rice meals, biryani and more — order ahead on WhatsApp for pickup or delivery, or book us to cater your next get-together.</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 44px;">
+      <a class="btn-primary" href="https://wa.me/31622364947?text=Hi%20TiffinPoint%2C%20I%27d%20like%20to%20place%20an%20order." target="_blank" rel="noopener">Order on WhatsApp</a>
+      <a class="btn-secondary" href="#menu">See the menu</a>
+    </div>
+    <div class="facts">
+      <div style="font-size: 14px; color: var(--ink-soft);"><span class="serif" style="font-size: 15px; font-weight: 600; color: var(--ink);">Pickup</span> from €20</div>
+      <div class="fact-divider"></div>
+      <div style="font-size: 14px; color: var(--ink-soft);"><span class="serif" style="font-size: 15px; font-weight: 600; color: var(--ink);">Free delivery</span> within 5 km</div>
+      <div class="fact-divider"></div>
+      <div style="font-size: 14px; color: var(--ink-soft);"><span class="serif" style="font-size: 15px; font-weight: 600; color: var(--ink);">Made</span> fresh to order</div>
+    </div>
+  </div>
+</div>
+
+<div id="hours" class="section" style="background: var(--panel); border-radius: 4px; max-width: 980px;">
+  <h2 class="serif" style="margin: 0 0 8px; font-size: 30px; font-weight: 600;">When you can order</h2>
+  <p style="margin: 0 0 36px; font-size: 15px; color: var(--ink-mute);">Place your order in good time — everything is cooked after it's ordered.</p>
+  <div class="two-col">
+    <div>
+      <div class="serif cat-title">Weekdays — dinner only</div>
+      <div class="row"><span class="item-name">Order by</span><span class="item-price">16:30</span></div>
+      <div class="row"><span class="item-name">Pickup from</span><span class="item-price">18:30</span></div>
+    </div>
+    <div>
+      <div class="serif cat-title">Weekends — breakfast, lunch &amp; dinner</div>
+      <div class="row"><span class="item-name">Breakfast — order by (day before)</span><span class="item-price">22:30</span></div>
+      <div class="row"><span class="item-name">Breakfast — pickup from</span><span class="item-price">08:30</span></div>
+      <div class="row"><span class="item-name">Lunch — order by</span><span class="item-price">10:00</span></div>
+      <div class="row"><span class="item-name">Lunch — pickup from</span><span class="item-price">13:00</span></div>
+      <div class="row"><span class="item-name">Dinner — order by</span><span class="item-price">16:30</span></div>
+      <div class="row"><span class="item-name">Dinner — pickup from</span><span class="item-price">18:30</span></div>
+    </div>
+  </div>
+</div>
+
+<div id="menu" class="section" style="max-width: 760px;">
+  <h2 class="serif" style="margin: 0 0 8px; font-size: 30px; font-weight: 600;">Menu</h2>
+  <p style="margin: 0 0 20px; font-size: 15px; color: var(--ink-mute);">All vegetarian. Prices in euros.</p>
+  <a class="catalog-btn" style="margin-bottom: 40px;" href="https://wa.me/c/31622364947" target="_blank" rel="noopener">See photos of every dish on WhatsApp →</a>
+
+  <div style="margin-bottom: 40px;">
+    <div class="serif" style="font-size: 19px; font-weight: 600; margin-bottom: 6px;">Dinner — every day</div>
+    <div class="row"><span class="item-name">Idli (5 pcs) with sambar &amp; chutney</span><span class="item-price">€ 7,00</span></div>
+    <div class="row"><span class="item-name">Mini sambar idli with ghee (12 pcs)</span><span class="item-price">€ 7,50</span></div>
+    <div class="row"><span class="item-name">Mini podi idli (10 pcs)</span><span class="item-price">€ 7,00</span></div>
+    <div class="row"><span class="item-name">Thattu idli with podi (1 pc)</span><span class="item-price">€ 3,50</span></div>
+    <div class="row"><span class="item-name">Plain dosa (2) with sambar &amp; chutney</span><span class="item-price">€ 6,50</span></div>
+    <div class="row"><span class="item-name">Podi dosa (2) with sambar &amp; chutney</span><span class="item-price">€ 7,00</span></div>
+    <div class="row"><span class="item-name">Kal dosa (2) with sambar &amp; chutney</span><span class="item-price">€ 6,50</span></div>
+    <div class="row"><span class="item-name">Masala dosa with sambar</span><span class="item-price">€ 7,50</span></div>
+    <div class="row"><span class="item-name">Onion uttappam (2) with sambar &amp; chutney</span><span class="item-price">€ 7,50</span></div>
+    <div class="row"><span class="item-name">Medu vada, soft (4)</span><span class="item-price">€ 4,00</span></div>
+    <div class="row"><span class="item-name">Masala / parupu vada (2) with chutney</span><span class="item-price">€ 3,00</span></div>
+    <div class="row"><span class="item-name">Kaara paniyaram (7) with sambar</span><span class="item-price">€ 5,50</span></div>
+    <div class="row"><span class="item-name">Poori (3) with masala</span><span class="item-price">€ 6,50</span></div>
+    <div class="row"><span class="item-name">Parotta (2) with veg kurma</span><span class="item-price">€ 7,00</span></div>
+    <div class="row"><span class="item-name">Chapathi (2) with veg kurma</span><span class="item-price">€ 7,00</span></div>
+    <div class="row"><span class="item-name">Lemon rice with aloo curry</span><span class="item-price">€ 7,50</span></div>
+    <div class="row"><span class="item-name">Vegetable biryani with raita</span><span class="item-price">€ 7,50</span></div>
+  </div>
+
+  <div style="margin-bottom: 40px;">
+    <div class="serif" style="font-size: 19px; font-weight: 600; margin-bottom: 6px;">Breakfast — weekends</div>
+    <div class="row"><span class="item-name">Pongal, 1 plate</span><span class="item-price">€ 6,00</span></div>
+    <div class="row"><span class="item-name">Poori (3) with masala</span><span class="item-price">€ 6,50</span></div>
+    <div class="row"><span class="item-name">Medu vada, soft (4)</span><span class="item-price">€ 4,00</span></div>
+    <div class="row"><span class="item-name">Kaara paniyaram (7) with sambar</span><span class="item-price">€ 5,50</span></div>
+    <div class="row"><span class="item-name">Onion uttappam (2) with sambar &amp; chutney</span><span class="item-price">€ 7,50</span></div>
+    <div class="row"><span class="item-name">Podi dosa (2) with sambar &amp; chutney</span><span class="item-price">€ 7,00</span></div>
+    <div class="row"><span class="item-name">Kal dosa (2) with sambar &amp; chutney</span><span class="item-price">€ 6,50</span></div>
+    <div class="row"><span class="item-name">Plain dosa (2) with sambar &amp; chutney</span><span class="item-price">€ 6,50</span></div>
+    <div class="row"><span class="item-name">Mini sambar idli with ghee (12 pcs)</span><span class="item-price">€ 7,50</span></div>
+    <div class="row"><span class="item-name">Mini podi idli (10 pcs)</span><span class="item-price">€ 7,00</span></div>
+    <div class="row"><span class="item-name">Idli (5 pcs) with sambar &amp; chutney</span><span class="item-price">€ 7,00</span></div>
+  </div>
+
+  <div>
+    <div class="serif" style="font-size: 19px; font-weight: 600; margin-bottom: 6px;">Lunch — weekends</div>
+    <div class="row"><span class="item-name">South Indian veg meals</span><span class="item-price">€ 13,00</span></div>
+    <div class="row"><span class="item-name">Lemon rice with aloo curry</span><span class="item-price">€ 7,50</span></div>
+    <div class="row"><span class="item-name">Vegetable biryani with raita</span><span class="item-price">€ 7,50</span></div>
+  </div>
+</div>
+
+<div id="delivery" class="section" style="max-width: 980px;">
+  <h2 class="serif" style="margin: 0 0 36px; font-size: 30px; font-weight: 600;">Delivery &amp; pickup</h2>
+  <div class="two-col">
+    <div>
+      <div class="serif cat-title">Pickup</div>
+      <div class="row"><span class="item-name">Minimum order</span><span class="item-price">€20</span></div>
+    </div>
+    <div>
+      <div class="serif cat-title">Delivery</div>
+      <div class="row"><span class="item-name">Minimum order</span><span class="item-price">€25</span></div>
+      <div class="row"><span class="item-name">Within 5 km</span><span class="item-price">Free</span></div>
+      <div class="row"><span class="item-name">Beyond 5 km</span><span class="item-price">+10%</span></div>
+    </div>
+  </div>
+</div>
+
+<div id="catering" class="section" style="background: var(--dark); border-radius: 4px; max-width: 980px; color: var(--cream);">
+  <h2 class="serif" style="margin: 0 0 18px; font-size: 30px; font-weight: 600; color: var(--cream);">Catering</h2>
+  <p style="margin: 0 0 30px; font-size: 16px; line-height: 1.6; max-width: 560px; color: #E8E2D0;">Cooking for an office lunch, a family get-together, or a celebration? We cater South Indian breakfast, lunch and dinner spreads for groups of any size. Send us your headcount and date, and we'll work out a menu together.</p>
+  <a class="btn-primary" style="background: var(--gold); color: var(--dark);" href="https://wa.me/31622364947?text=Hi%20TiffinPoint%2C%20I%27d%20like%20to%20ask%20about%20catering." target="_blank" rel="noopener">Enquire on WhatsApp</a>
+</div>
+
+<div class="section" style="max-width: 980px; padding-top: 40px; padding-bottom: 56px; border-top: 1px solid rgba(42,36,23,0.12); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px;">
+  <div>
+    <div class="serif" style="font-size: 18px; font-weight: 600; margin-bottom: 6px;">TiffinPoint</div>
+    <div style="font-size: 14px; color: var(--ink-mute);">Eindhoven, Netherlands</div>
+  </div>
+  <div style="font-size: 14px; color: var(--ink-mute);">
+    <div>WhatsApp: <a class="link" href="https://wa.me/31622364947" target="_blank" rel="noopener">+31 6 22 36 49 47</a></div>
+    <div style="margin-top: 6px;">Full photo menu on our WhatsApp Business catalog.</div>
+  </div>
+</div>
+
+</body>
+</html>
